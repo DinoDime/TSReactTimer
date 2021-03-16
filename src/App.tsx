@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Timer from './timer';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <h2>Welcome to the Timer</h2>
+      <Timer start= {Date.now()}/>
     </div>
   );
 }
