@@ -21,7 +21,7 @@ function App() {
         </a>
       </header>
       <h2>Welcome to the Timer</h2>
-      <Timer start= {Date.now()}/>
+      <Timer start={Date.now()}/>
     </div>
   );
 }

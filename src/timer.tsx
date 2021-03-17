@@ -1,15 +1,15 @@
 import React, { Component} from 'react';
-
-class Timer extends Component{
+type timerprops = {start:number};
+class Timer extends Component<timerprops>{
     componentDidMount(){
-       this.timer =  setInterval(this.ticker, 1000);
+       setInterval(this.ticker, 1000);
     }
     ticker(){
-        this.setState({clock: new Date() - this.props.start})
+        this.setState({clock: new Date().getTime() - this.props.start})
     };
-    constructor(props){
+    constructor(props:timerprops){
         super(props);
-        this.state = {
+        this.state = { 
             clock:0
         };
         this.ticker = this.ticker.bind(this);
